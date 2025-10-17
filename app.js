@@ -45,3 +45,6 @@ function editLine(element){
     var newValue = prompt("Enter new value");
     element.parentNode.parentNode.childNodes[0].innerHTML = newValue;
 }
+function deleteAll() {
+    todoList.innerHTML = "";
+}
