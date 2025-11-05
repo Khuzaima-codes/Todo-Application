@@ -13,10 +13,12 @@
 </head>
 
 <body>
-    <div class="d-flex input-buttons w-100 px-3 py-2 border-bottom border-2 bg-white position-absolute" id="input-buttons">
-        <input type="text" id="todo-inp" placeholder="Enter todo..." class="w-100 p-2 bg-transparent border border-0 fs-3" style="outline: none;">
-        <button class="add-todo px-3 bg-danger text-white border border-danger rounded-2 fw-bold me-2" style="width: 125px;" onclick="takeUp()">Cancel</button>
-        <button class="add-todo px-3 bg-success text-white border border-success rounded-2 fw-bold" style="width: 125px;" onclick="addTodo()">Add todo</button>
+    <div class="d-md-flex input-buttons w-100 px-3 py-2 py-md-3 border-bottom border-2 bg-white position-absolute" id="input-buttons" style="z-index: 3;">
+        <input type="text" id="todo-inp" placeholder="Enter todo..." class="w-100 p-2 my-2 bg-transparent border border-0 fs-3" style="outline: none;">
+        <div class="d-flex justify-content-center my-2">
+            <button class="add-todo px-3 py-2 py-md-0 bg-danger text-white border border-danger rounded-2 fw-bold me-2" style="width: 125px;" onclick="takeUp()">Cancel</button>
+            <button class="add-todo px-3 py-2 py-md-0 bg-success text-white border border-success rounded-2 fw-bold" style="width: 125px; text-wrap: nowrap;" onclick="addTodo()">Add todo</button>
+        </div>
     </div>
     <div class="todo-container m-auto text-center position-relative mt-5 text-capitalize px-4 bg-body-tertiary shadow-lg pt-5 pb-1 rounded-4">
         <h2 class="text-uppercase todo-heading mb-4 fw-bold text-danger">todo <span class="text-success">application</span></h2>

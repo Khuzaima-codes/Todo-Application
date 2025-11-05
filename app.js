@@ -10,15 +10,16 @@ var firebaseConfig = {
 var app = firebase.initializeApp(firebaseConfig);
 
 var inputDiv = document.getElementById("input-buttons");
+var input = document.getElementById("todo-inp");
+var todoList = document.getElementById("todo-list");
+
 function takeDown() {
     inputDiv.classList.add("display");
 }
 function takeUp() {
     inputDiv.classList.remove("display");
+    input.value = "";
 }
-
-var input = document.getElementById("todo-inp");
-var todoList = document.getElementById("todo-list");
 function addTodo() {
     if (input.value === "") {
         alert("empty input");
@@ -31,6 +32,7 @@ function addTodo() {
         }
         database.child(key).set(todo);
         input.value = "";
+        takeUp();
     }
 }
 firebase
